@@ -12,7 +12,7 @@
     <title>查询结果</title>
     <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/dist/css/style.css">
-    <script src="/dist/js/angular.js"></script>
+    <script src="/dist/js/angular.min.js"></script>
     <script>
         var app = angular.module("demoApp",[]);
         app.controller("person",function ($scope) {
