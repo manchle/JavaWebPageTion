@@ -3,24 +3,19 @@
 
 ##方法
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-方法名                                   描述  
+| 方法名        | 描述           |
+| ------------- |:-------------:|
+| setList(List list)     | 设置在页面显示的内容 | 
+| pageView(String url,String params);      | url当前页面的链接,params需要拼接的参数      |
+| setPageSize(int i); | 设置每页条数      |
+  
 
 1. `setList(List list)`                     设置在页面显示的内容  
 
 2. `pageView(String url,String params);`     url当前页面的链接,params需要拼接的参数  
 
 3. `setPageSize(int i);`                     设置每页条数  
-dog | bird | cat
-----|------|----
-foo | foo  | foo
-bar | bar  | bar
-baz | baz  | baz
+
 
 Step 1:依赖pagation
 
