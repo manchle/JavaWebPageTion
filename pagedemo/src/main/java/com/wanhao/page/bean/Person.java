@@ -24,6 +24,17 @@ public class Person implements Serializable {
         this.job = job;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", job='" + job + '\'' +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }

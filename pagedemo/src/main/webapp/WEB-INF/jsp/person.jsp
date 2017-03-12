@@ -13,15 +13,22 @@
     <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/dist/css/style.css">
     <script src="/dist/js/angular.min.js"></script>
+    <script src="/dist/js/jquery-2.0.0.min.js"></script>
     <script>
-        var app = angular.module("demoApp",[]);
-        app.controller("person",function ($scope) {
-           $scope.checkPageNo = function () {
-               //校验输入的页面
-               $scope.pageNo = $scope.pageNo<=0?1:$scope.pageNo;
-               $scope.pageNo = $scope.pageNo>=${pagination.totalPage}?${pagination.totalPage}:$scope.pageNo;
-           }
-        });
+        <%--var app = angular.module("demoApp",[]);--%>
+        <%--app.controller("person",function ($scope) {--%>
+           <%--$scope.checkPageNo = function () {--%>
+               <%--//校验输入的页面--%>
+               <%--$scope.pageNo = $scope.pageNo<=0?1:$scope.pageNo;--%>
+               <%--$scope.pageNo = $scope.pageNo>=${pagetion.totalPage}?${pagetion.totalPage}:$scope.pageNo;--%>
+           <%--}--%>
+        <%--});--%>
+        $(function () {
+            $("#pageNo").change(function () {
+                $("#pageNo").val( $("#pageNo").val()<=0?1:$("#pageNo").val() );
+                $("#pageNo").val( $("#pageNo").val()>${pagetion.totalPage}?${pagetion.totalPage}:$("#pageNo").val() );
+            });
+        })
     </script>
 </head>
 <body ng-app="demoApp" ng-controller="person">
