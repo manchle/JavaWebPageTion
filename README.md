@@ -17,14 +17,14 @@
 一、使用maven,由于还未把项目提交到中央仓库,所以使用之前首先需要您把pagetion部署到您的本地仓库中,运行 maven package install 即可.
 
     <dependency>
-    <groupId>com.wanhao</groupId>
-    <artifactId>pagation</artifactId>
-    <version>1.0-SNAPSHOT</version>
+        <groupId>com.wanhao</groupId>
+        <artifactId>pagation</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </dependency>
 
 二、直接导入jar包
 
-在lib中加入 pagation-1.0-SNAPSHOT.jar
+在lib中加入 pagation-1.0-SNAPSHOT.jar,jar放置在 pagetion->target下.
 
 
 ####Step 2:构造Pagetion
@@ -44,7 +44,7 @@ public Pagetion(int pageNo, int pageSize, int totalCount)
 把pagetion放入request域中,然后:  
 
     <c:forEach items="${pagetion.pageView }" var="page">
-    ${page}  
+        ${page}  
     </c:forEach>
     
 ###关于跳转到页面校验的问题:
