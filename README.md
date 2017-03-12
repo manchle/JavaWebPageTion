@@ -1,6 +1,8 @@
 # JavaWebPageTion
 打造通用的javaweb分页
 
+###详细使用请见pagedemo中
+
 ##方法
 
 | 方法名        | 描述           |
@@ -47,7 +49,7 @@ public Pagetion(int pageNo, int pageSize, int totalCount)
         ${page}  
     </c:forEach>
     
-###关于跳转到页面校验的问题:
+##关于跳转到页面校验的问题:
 一、使用angular的方式,需要自己定义ng-app,ng-controller,直接在scope中声明checkPageNo方法即可,方法名称固定.  
 
     $scope.checkPageNo = function () {
@@ -63,3 +65,4 @@ public Pagetion(int pageNo, int pageSize, int totalCount)
         $("#pageNo").val( $("#pageNo").val()>${pagetion.totalPage}?${pagetion.totalPage}:$("#pageNo").val() );
         });
     })
+    
