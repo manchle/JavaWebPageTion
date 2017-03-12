@@ -10,11 +10,11 @@
 | setPageSize(int i); | 设置每页条数      |
 
 
-##使用步骤:  
+##使用步骤:
 
 ####Step 1:依赖pagation
 
-一、使用maven
+一、使用maven,由于还未把项目提交到中央仓库,所以使用之前首先需要您把pagetion部署到您的本地仓库中,运行 maven package install 即可.
 
     <dependency>
     <groupId>com.wanhao</groupId>
@@ -41,7 +41,25 @@ public Pagetion(int pageNo, int pageSize, int totalCount)
 * pagetion.pageView(url,params);  
 
 ####Step 4:在页面使用  
+把pagetion放入request域中,然后:  
 
     <c:forEach items="${pagetion.pageView }" var="page">
     ${page}  
     </c:forEach>
+    
+###关于跳转到页面校验的问题:
+一、使用angular的方式,需要自己定义ng-app,ng-controller,直接在scope中声明checkPageNo方法即可,方法名称固定.  
+
+    $scope.checkPageNo = function () {
+        $scope.pageNo = $scope.pageNo<=0?1:$scope.pageNo;
+        $scope.pageNo = $scope.pageNo>=${pagetion.totalPage}?${pagetion.totalPage}:$scope.pageNo;
+    }
+    
+二、使用jQuery, jQuery的change事件在鼠标点击其它的地方进行触发, 实时性低于angular一些.
+
+    $(function () {
+    $("#pageNo").change(function () {
+        $("#pageNo").val( $("#pageNo").val()<=0?1:$("#pageNo").val() );
+        $("#pageNo").val( $("#pageNo").val()>${pagetion.totalPage}?${pagetion.totalPage}:$("#pageNo").val() );
+        });
+    })
