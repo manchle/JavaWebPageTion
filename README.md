@@ -32,18 +32,16 @@
 public Pagetion(int pageNo, int pageSize, int totalCount)
 
 参数说明:
-1. pageNo      分页页码，从1开始，即第一页。
-2. pageSize    分页每页显示的条数，默认显示10条
-3. totalCount  数据的总条数
+* pageNo      分页页码，从1开始，即第一页。
+* pageSize    分页每页显示的条数，默认显示10条
+* totalCount  数据的总条数
 
 ####Step 3:设置数据和其它参数
-pagetion.setList(List list);
-pagetion.pageView(url,params);  
+* pagetion.setList(List list);
+* pagetion.pageView(url,params);  
 
 ####Step 4:在页面使用  
 
-`<c:forEach items="${pagetion.pageView }" var="page">  
-
-                    ${page}  
-                      
-</c:forEach>`
+    <c:forEach items="${pagetion.pageView }" var="page">
+    ${page}  
+    </c:forEach>
