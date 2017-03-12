@@ -4,7 +4,8 @@
 ###详细使用请见pagedemo中
 
 ###效果图
-![截图1](https://github.com/wanhao838088/JavaWebPageTion/blob/master/screenshot/screen_1.png)
+![截图1](https://github.com/wanhao838088/JavaWebPageTion/blob/master/screenshot/screen_1.png)  
+
 ![截图2](https://github.com/wanhao838088/JavaWebPageTion/blob/master/screenshot/screen_2.png)
 
 ##方法
