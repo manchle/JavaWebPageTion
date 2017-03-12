@@ -16,11 +16,11 @@
 
 一、使用maven
 
-`<dependency>
-            <groupId>com.wanhao</groupId>
-            <artifactId>pagation</artifactId>
-            <version>1.0-SNAPSHOT</version>
-</dependency>`
+    <dependency>
+    <groupId>com.wanhao</groupId>
+    <artifactId>pagation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    </dependency>
 
 二、直接导入jar包
 
